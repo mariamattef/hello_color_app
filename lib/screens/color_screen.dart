@@ -13,9 +13,9 @@ class HelloScreen extends StatelessWidget {
         return GestureDetector(
           onTap: () => context.read<ColorCubit>().changeBackgroundColor(),
           child: Scaffold(
-            backgroundColor: state.backgroundColor, // Change background color
+            backgroundColor: state.backgroundColor, 
             appBar: AppBar(
-              backgroundColor: state.appBarAndFabColor, // Same color for AppBar
+              backgroundColor: state.appBarAndFabColor, 
               title: const Text('Hello there'),
               centerTitle: true,
             ),
@@ -27,7 +27,7 @@ class HelloScreen extends StatelessWidget {
               ),
             ),
             floatingActionButton: FloatingActionButton(
-              backgroundColor: state.appBarAndFabColor, // Same color for FAB
+              backgroundColor: state.appBarAndFabColor, 
               onPressed:
                   () => context.read<ColorCubit>().changeAppBarAndFabColor(),
               child: const Icon(Icons.color_lens),
