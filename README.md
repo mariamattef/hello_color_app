@@ -14,4 +14,4 @@ A simple Flutter app that demonstrates how to change the background color, AppBa
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your_username/hello_color_app.git
+   git clone https://github.com/mariamattef/hello_color_app.git
