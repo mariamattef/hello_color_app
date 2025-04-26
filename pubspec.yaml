@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
+  shared_preferences: ^2.5.3
   solid_lints: ^0.3.0
 
 dev_dependencies:
