@@ -36,13 +36,13 @@ class ColorCubit extends Cubit<ColorState> {
   }
 
   String _colorToHex(Color color) {
-    return '#${color.value.toRadixString(16).padLeft(8, '0').toUpperCase()}';
+    return '#${color.toARGB32() .toRadixString(16).padLeft(8, '0').toUpperCase()}';
   }
 
   Future<void> _saveColors() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setInt(_bgKey, state.backgroundColor.value);
-    prefs.setInt(_barKey, state.appBarAndFabColor.value);
+    prefs.setInt(_bgKey, state.backgroundColor.toARGB32());
+    prefs.setInt(_barKey, state.appBarAndFabColor.toARGB32());
   }
 
   Future<void> _loadSavedColors() async {
